@@ -21,3 +21,17 @@ This repository contains the structure and data of the **library** database. You
 - **Local Copy Only:** Once the script is executed, the database is created **only on your local machine**. It is **not automatically connected to the original database** on someone else’s computer.  
 - Every person will have their own independent copy of the database.
 - **Why local?** Using Azure or other cloud solutions can incur costs. Therefore, it is more practical for everyone to run the database **locally** on their own machine.
+
+## ✅ What Works?
+
+- **View Books:** Navigate to `/Book` in your browser. You will see the list of books from the database.  
+- **Add Book:** The "Add New Book" button works. You can successfully add new books to our booklist.
+
+<!-- Images -->
+<img src="images/view_books.png" alt="View Books Screenshot" width="400"/>
+<img src="images/add_book.png" alt="Add Book Screenshot" width="400"/>  
+
+
+## ⚠️ Work In Progress
+
+- **Borrow & Return Buttons:** These are currently placeholders (UI only) and are not connected to the backend yet.
