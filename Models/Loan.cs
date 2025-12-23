@@ -25,4 +25,16 @@ public class Loan
     public Book Book { get; set; }
     public User User { get; set; }
 
+    public bool IsActive()
+{
+    return RETURN_DATE == null && STATUS;
+}
+
+public void CloseLoan()
+{
+    RETURN_DATE = DateTime.Now;
+    STATUS = false;
+}
+
+
 }

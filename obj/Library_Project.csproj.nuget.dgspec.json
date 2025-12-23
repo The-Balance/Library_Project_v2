@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/ol/Codes/.Net-proj/Library_Project/Library_Project.csproj": {}
+    "C:\\Users\\2eeyn\\OneDrive\\Belgeler\\Library_Project_v2\\Library_Project.csproj": {}
   },
   "projects": {
-    "/home/ol/Codes/.Net-proj/Library_Project/Library_Project.csproj": {
+    "C:\\Users\\2eeyn\\OneDrive\\Belgeler\\Library_Project_v2\\Library_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/ol/Codes/.Net-proj/Library_Project/Library_Project.csproj",
+        "projectUniqueName": "C:\\Users\\2eeyn\\OneDrive\\Belgeler\\Library_Project_v2\\Library_Project.csproj",
         "projectName": "Library_Project",
-        "projectPath": "/home/ol/Codes/.Net-proj/Library_Project/Library_Project.csproj",
-        "packagesPath": "/home/ol/.nuget/packages/",
-        "outputPath": "/home/ol/Codes/.Net-proj/Library_Project/obj/",
+        "projectPath": "C:\\Users\\2eeyn\\OneDrive\\Belgeler\\Library_Project_v2\\Library_Project.csproj",
+        "packagesPath": "C:\\Users\\2eeyn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2eeyn\\OneDrive\\Belgeler\\Library_Project_v2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/ol/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\2eeyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -37,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -46,6 +53,10 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -67,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

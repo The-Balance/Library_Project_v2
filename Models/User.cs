@@ -20,4 +20,9 @@ public class User
 
     public ICollection<Loan> Loans { get; set; }
 
+    public bool CanBorrow(int maxLoanCount = 3)
+    {
+        return Loans == null || Loans.Count(l => l.STATUS) < 3;
+    }
+
 }
