@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Kitap Ödünç Ver";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">📦 Kitap Ödünç Ver (Librarian)</h4>
+                </div>
+
+                <div class="card-body">
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["Success"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <form method="post" asp-controller="Admin" asp-action="Borrow">
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Kullanıcı Seç</label>
+                            <select name="userId" class="form-select" required>
+                                <option value="">-- Bir Kullanıcı Seçin --</option>
+                                @if (ViewBag.Users != null)
+                                {
+                                    foreach (var user in ViewBag.Users)
+                                    {
+                                        <option value="@user.USER_ID">
+                                            @user.NAME @user.SURNAME (@user.USERNAME)
+                                        </option>
+                                    }
+                                }
+                            </select>
+                            <div class="form-text">Kitabı teslim alacak kullanıcıyı seçiniz.</div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Kitap Seç</label>
+                            <select name="bookId" class="form-select" required>
+                                <option value="">-- Bir Kitap Seçin --</option>
+                                @if (ViewBag.Books != null)
+                                {
+                                    foreach (var book in ViewBag.Books)
+                                    {
+                                        <option value="@book.BOOK_ID">
+                                            @book.TITLE - @book.AUTHOR (Stok: @book.STOCK)
+                                        </option>
+                                    }
+                                }
+                            </select>
+                            <div class="form-text">Sadece stoğu olan kitaplar listelenir.</div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" class="btn btn-success btn-lg">
+                                ✅ Ödünç Ver
+                            </button>
+                            <a asp-controller="Book" asp-action="Index" class="btn btn-secondary">
+                                🔙 Listeye Dön
+                            </a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
